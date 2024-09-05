@@ -1,0 +1,18 @@
+
+version: '3'
+
+services:
+  webhook-server:
+    build:
+      context: .
+    ports:
+      - "5000:5000"
+    container_name: github-webhook-server
+
+  ngrok:
+    image: wernight/ngrok
+    command: ngrok http --authtoken $NGROK_AUTHTOKEN webhook-server:5000
+    depends_on:
+      - webhook-server
+    ports:
+      - "4040:4040"
