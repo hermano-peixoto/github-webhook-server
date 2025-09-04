@@ -18,4 +18,4 @@ COPY github_webhook_server.py .
 EXPOSE 5000
 
 # Comando para rodar o servidor Flask
-CMD ["python", "github_webhook_server.py"]
+CMD ["python", "-u", "github_webhook_server.py"]
