@@ -17,5 +17,5 @@ def github_webhook():
     return jsonify(response), 200
 
 if __name__ == '__main__':
-    # Inicia o servidor Flask
+    # Inicia o servidor Flask - port 5000
     app.run(host='0.0.0.0', port=5000)

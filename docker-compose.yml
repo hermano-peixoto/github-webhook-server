@@ -5,7 +5,7 @@ services:
       context: .
     ports:
       - "5000:5000"
-    container_name: github-webhook-server
+    container_name: webhook-server
 
   ngrok:
     image: ngrok/ngrok:latest
